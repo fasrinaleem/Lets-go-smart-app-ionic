@@ -1,0 +1,7 @@
+{
+  "name": "qrReader",
+  "type": "angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
