@@ -6,6 +6,9 @@ import { IonicModule, IonicRouteStrategy } from "@ionic/angular";
 import { SplashScreen } from "@ionic-native/splash-screen/ngx";
 import { StatusBar } from "@ionic-native/status-bar/ngx";
 
+import { BarcodeScanner } from "@ionic-native/barcode-scanner/ngx";
+import { Base64ToGallery } from "@ionic-native/base64-to-gallery/ngx";
+
 import { AppComponent } from "./app.component";
 import { AppRoutingModule } from "./app-routing.module";
 import { ReactiveFormsModule } from "@angular/forms";
@@ -29,7 +32,9 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    BarcodeScanner,
+    Base64ToGallery
   ],
   bootstrap: [AppComponent]
 })

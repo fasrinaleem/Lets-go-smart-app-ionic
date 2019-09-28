@@ -3,10 +3,12 @@ import { Injectable, NgZone } from "@angular/core";
 import { AngularFireAuth } from "@angular/fire/auth";
 import { AngularFirestore } from "@angular/fire/firestore";
 import { Router } from "@angular/router";
+// import { AlertController, LoadingController } from '@ionic/angular';
 import { Observable, BehaviorSubject } from "rxjs";
+//import { loadingController } from "@ionic/core";
 import { Constants } from "../constants/constants";
 import { User } from "../models/user";
-
+export let currentUserId = "";
 @Injectable({
   providedIn: "root"
 })
@@ -41,7 +43,9 @@ export class ServicesPage implements OnInit {
         let user = {
           id: userResponse.user.uid,
           email: userResponse.user.email,
-          role: users.type
+          role: users.type,
+          amount: users.amount,
+          username: users.username
         };
 
         //add the user to the database
@@ -80,10 +84,12 @@ export class ServicesPage implements OnInit {
           .onSnapshot(snap => {
             snap.forEach(userRef => {
               console.log("userRef", userRef.data());
+              // currentUserId = user.user.email;
               this.currentUser = userRef.data();
               //setUserStatus
               this.setUserStatus(this.currentUser);
               if (userRef.data().role !== "admin") {
+                // currentUserId = user.user.email;
                 this.router.navigate(["/home"]);
               } else {
                 this.router.navigate(["/admin-home"]);
@@ -92,6 +98,10 @@ export class ServicesPage implements OnInit {
           });
       })
       .catch(err => err);
+  }
+
+  getUserEmail() {
+    return currentUserId;
   }
 
   logOut() {
@@ -103,7 +113,7 @@ export class ServicesPage implements OnInit {
         this.currentUser = null;
         //set the listenener to be null, for the UI to react
         this.setUserStatus(null);
-        this.ngZone.run(() => this.router.navigate(["/sign-in"]));
+        this.ngZone.run(() => this.router.navigate(["/login"]));
       })
       .catch(err => {
         console.log(err);
