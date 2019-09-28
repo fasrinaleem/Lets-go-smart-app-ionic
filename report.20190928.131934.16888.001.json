@@ -1,0 +1,317 @@
+
+{
+  "header": {
+    "event": "Allocation failed - JavaScript heap out of memory",
+    "location": "OnFatalError",
+    "filename": "report.20190928.131934.16888.001.json",
+    "dumpEventTime": "2019/09/28 13:19:34",
+    "processId": "16888",
+    "commandLine": [
+      "node",
+      "C:\\Users\\Fasrin\\AppData\\Roaming\\npm\\\\node_modules\\cordova\\bin\\cordova",
+      "-v",
+      "--no-telemetry"
+    ],
+    "nodejsVersion": "v11.8.0",
+    "wordSize": "64 bit",
+    "componentVersions": {
+      "node": "11.8.0",
+      "v8": "7.0.276.38-node.16",
+      "uv": "1.25.0",
+      "zlib": "1.2.11",
+      "brotli": "1.0.7",
+      "ares": "1.15.0",
+      "modules": "67",
+      "nghttp2": "1.34.0",
+      "napi": "4",
+      "llhttp": "1.0.1",
+      "http_parser": "2.8.0",
+      "openssl": "1.1.0j",
+      "cldr": "34.0",
+      "icu": "63.1",
+      "tz": "2018e",
+      "unicode": "11.0",
+      "arch": "x64",
+      "platform": "win32",
+      "release": "node"
+    },
+    "osVersion": "Windows 10",
+    "machine": "FAZIL-PC Fazil - PC"
+  },
+  "javascriptStack": {
+    "message": "No stack.",
+    "stack": [
+      "Unavailable."
+    ]
+  },
+  "nativeStack": [
+    " [pc=00007FF760FB6B5C] ",
+    " [pc=00007FF760FB5C8D] ",
+    " [pc=00007FF760FB5662] ",
+    " [pc=00007FF7610AFD9D] ",
+    " [pc=00007FF76156CF4E] ",
+    " [pc=00007FF76156CE87] ",
+    " [pc=00007FF761845C94] ",
+    " [pc=00007FF76183B8BE] ",
+    " [pc=00007FF761839FA8] ",
+    " [pc=00007FF761843917] ",
+    " [pc=00007FF761843996] ",
+    " [pc=00007FF761404871] ",
+    " [pc=00007FF761B5F76A] ",
+    " [pc=000002682AD50461] "
+  ],
+  "javascriptHeap": {
+    "totalMemory": "23384064",
+    "totalCommittedMemory": "23384064",
+    "usedMemory": "19807424",
+    "availableMemory": "1504586680",
+    "memoryLimit": "1526909922",
+    "heapSpaces": {
+      "read_only_space": {
+        "memorySize": "524288",
+        "committedMemory": "524288",
+        "capacity": "515584",
+        "used": "33520",
+        "available": "482064"
+      },
+      "new_space": {
+        "memorySize": "1048576",
+        "committedMemory": "1048576",
+        "capacity": "1031168",
+        "used": "1031144",
+        "available": "24"
+      },
+      "old_space": {
+        "memorySize": "14356480",
+        "committedMemory": "14356480",
+        "capacity": "14026288",
+        "used": "13860288",
+        "available": "166000"
+      },
+      "code_space": {
+        "memorySize": "1572864",
+        "committedMemory": "1572864",
+        "capacity": "1468800",
+        "used": "804160",
+        "available": "664640"
+      },
+      "map_space": {
+        "memorySize": "1585152",
+        "committedMemory": "1585152",
+        "capacity": "1176912",
+        "used": "1142640",
+        "available": "34272"
+      },
+      "large_object_space": {
+        "memorySize": "4296704",
+        "committedMemory": "4296704",
+        "capacity": "1506175352",
+        "used": "2935672",
+        "available": "1503239680"
+      },
+      "new_large_object_space": {
+        "memorySize": "0",
+        "committedMemory": "0",
+        "capacity": "0",
+        "used": "0",
+        "available": "0"
+      }
+    }
+  },
+  "libuv": [
+    {
+      "type": "async",
+      "is_active": "1",
+      "is_referenced": "0",
+      "address": "2414649614944",
+      "details": ""
+    },
+    {
+      "type": "timer",
+      "is_active": "0",
+      "is_referenced": "0",
+      "address": "707980683872",
+      "details": "repeat: 0, timeout in: 2413256213328 ms"
+    },
+    {
+      "type": "check",
+      "is_active": "1",
+      "is_referenced": "0",
+      "address": "707980684032",
+      "details": ""
+    },
+    {
+      "type": "idle",
+      "is_active": "0",
+      "is_referenced": "1",
+      "address": "707980684152",
+      "details": ""
+    },
+    {
+      "type": "prepare",
+      "is_active": "0",
+      "is_referenced": "0",
+      "address": "707980684272",
+      "details": ""
+    },
+    {
+      "type": "check",
+      "is_active": "0",
+      "is_referenced": "0",
+      "address": "707980684392",
+      "details": ""
+    },
+    {
+      "type": "async",
+      "is_active": "1",
+      "is_referenced": "0",
+      "address": "140700485510720",
+      "details": ""
+    },
+    {
+      "type": "async",
+      "is_active": "1",
+      "is_referenced": "0",
+      "address": "140700485510496",
+      "details": ""
+    },
+    {
+      "type": "signal",
+      "is_active": "1",
+      "is_referenced": "0",
+      "address": "2414651422896",
+      "details": "signum: 22"
+    },
+    {
+      "type": "signal",
+      "is_active": "1",
+      "is_referenced": "0",
+      "address": "2414651159536",
+      "details": "signum: 1"
+    },
+    {
+      "type": "signal",
+      "is_active": "1",
+      "is_referenced": "0",
+      "address": "2414650047520",
+      "details": "signum: 2"
+    },
+    {
+      "type": "signal",
+      "is_active": "1",
+      "is_referenced": "0",
+      "address": "2414651102480",
+      "details": "signum: 15"
+    },
+    {
+      "type": "pipe",
+      "is_active": "0",
+      "is_referenced": "1",
+      "address": "2414651588320",
+      "details": ", write queue size: 0, readable, writable"
+    },
+    {
+      "type": "pipe",
+      "is_active": "0",
+      "is_referenced": "1",
+      "address": "2414651589072",
+      "details": ", write queue size: 0, readable, writable"
+    }
+  ],
+  "environmentVariables": {
+    "=D:": "D:\\Fsrn\\Videos\\ionic_tutorial\\Location with source code\\Ionic4gMaps-master\\Ionic4gMaps-master",
+    "allusersprofile": "C:\\ProgramData",
+    "appdata": "C:\\Users\\Fasrin\\AppData\\Roaming",
+    "asl.log=Destination": "file",
+    "classpath": "%CLASSPATH %;C:\\JUnit\\junit-4.10.jar;.;",
+    "class_path": "C:\\Users\\Fasrin\\Desktop\\Year 03\\DS\\LabTest",
+    "colorterm": "truecolor",
+    "commonprogramfiles": "C:\\Program Files\\Common Files",
+    "commonprogramfiles(x86)": "C:\\Program Files (x86)\\Common Files",
+    "commonprogramw6432": "C:\\Program Files\\Common Files",
+    "computername": "FAZIL-PC",
+    "comspec": "C:\\WINDOWS\\system32\\cmd.exe",
+    "driverdata": "C:\\Windows\\System32\\Drivers\\DriverData",
+    "force_color": "0",
+    "fps_browser_app_profile_string": "Internet Explorer",
+    "fps_browser_user_profile_string": "Default",
+    "homedrive": "C:",
+    "homepath": "\\Users\\Fasrin",
+    "ionic_cli_bin": "C:\\Users\\Fasrin\\AppData\\Roaming\\npm\\node_modules\\ionic\\bin\\ionic",
+    "ionic_cli_local_error": "LOCAL_CLI_NOT_FOUND",
+    "java_home": "C:\\Program Files\\Java\\jdk1.8.0_171",
+    "junit_home": "C:\\JUnit",
+    "lang": "en_GB.UTF-8",
+    "localappdata": "C:\\Users\\Fasrin\\AppData\\Local",
+    "logonserver": "\\\\FAZIL-PC",
+    "m2_home": "C:\\apache-maven-3.6.0-bin\\apache-maven-3.6.0",
+    "maven_home": "C:\\apache-maven-3.6.0-bin\\apache-maven-3.6.0",
+    "number_of_processors": "4",
+    "onedrive": "C:\\Users\\Fasrin\\OneDrive",
+    "os": "Windows_NT",
+    "path": "D:\\Fsrn\\Videos\\ionic_tutorial\\Location with source code\\Ionic4gMaps-master\\Ionic4gMaps-master\\node_modules\\.bin;C:\\oraclexe\\app\\oracle\\product\\11.2.0\\server\\bin;;C:\\Program Files (x86)\\PC Connectivity Solution\\;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Program Files (x86)\\Common Files\\Oracle\\Java\\javapath;C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files\\Intel\\WiFi\\bin\\;C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\;C:\\Program Files (x86)\\Common Files\\Sage SData\\;C:\\Program Files (x86)\\Common Files\\Sage SBD\\;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\WINDOWS\\System32\\OpenSSH\\;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR;C:\\Program Files\\nodejs\\;C:\\Program Files\\Java\\jdk1.8.0_171\\bin;C:\\Program Files\\MongoDB\\Server\\4.0\\bin;C:\\apache-maven-3.6.0-bin\\apache-maven-3.6.0\\bin;C:\\Users\\Fasrin\\AppData\\Local\\Programs\\Git\\cmd;C:\\Users\\Fasrin\\Desktop\\Year 03\\AF\\React NEW 2\\MERN Stack Front To Back Full Stack React, Redux & Node.js\\mongodb-shell-win32-x86_64-2008plus-ssl-4.0.9\\mongodb-win32-x86_64-2008plus-ssl-4.0.9\\bin;C:\\Program Files\\Java\\jdk1.8.0_171\\bin;C:\\Users\\Fasrin\\AppData\\Local\\GitHubDesktop\\bin;C:\\Users\\Fasrin\\AppData\\Local\\Programs\\Microsoft VS Code\\bin;C:\\Users\\Fasrin\\AppData\\Roaming\\npm;",
+    "pathext": ".COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JSE;.WSF;.WSH;.MSC;.CPL",
+    "processor_architecture": "AMD64",
+    "processor_identifier": "Intel64 Family 6 Model 142 Stepping 9, GenuineIntel",
+    "processor_level": "6",
+    "processor_revision": "8e09",
+    "programdata": "C:\\ProgramData",
+    "programfiles": "C:\\Program Files",
+    "programfiles(x86)": "C:\\Program Files (x86)",
+    "programw6432": "C:\\Program Files",
+    "prompt": "$P$G",
+    "psmodulepath": "C:\\Users\\Fasrin\\Documents\\WindowsPowerShell\\Modules;C:\\Program Files\\WindowsPowerShell\\Modules;C:\\WINDOWS\\system32\\WindowsPowerShell\\v1.0\\Modules",
+    "public": "C:\\Users\\Public",
+    "sessionname": "Console",
+    "systemdrive": "C:",
+    "systemroot": "C:\\WINDOWS",
+    "temp": "C:\\Users\\Fasrin\\AppData\\Local\\Temp",
+    "term_program": "vscode",
+    "term_program_version": "1.38.1",
+    "tmp": "C:\\Users\\Fasrin\\AppData\\Local\\Temp",
+    "userdomain": "FAZIL-PC",
+    "userdomain_roamingprofile": "FAZIL-PC",
+    "username": "Fasrin",
+    "userprofile": "C:\\Users\\Fasrin",
+    "windir": "C:\\WINDOWS"
+  },
+  "sharedObjects": [
+    "C:\\Program Files\\nodejs\\node.exe",
+    "C:\\WINDOWS\\SYSTEM32\\ntdll.dll",
+    "C:\\WINDOWS\\System32\\KERNEL32.DLL",
+    "C:\\WINDOWS\\System32\\KERNELBASE.dll",
+    "C:\\WINDOWS\\System32\\PSAPI.DLL",
+    "C:\\WINDOWS\\System32\\WS2_32.dll",
+    "C:\\WINDOWS\\System32\\RPCRT4.dll",
+    "C:\\WINDOWS\\System32\\ADVAPI32.dll",
+    "C:\\WINDOWS\\System32\\msvcrt.dll",
+    "C:\\WINDOWS\\System32\\sechost.dll",
+    "C:\\WINDOWS\\System32\\USER32.dll",
+    "C:\\WINDOWS\\System32\\win32u.dll",
+    "C:\\WINDOWS\\System32\\GDI32.dll",
+    "C:\\WINDOWS\\System32\\gdi32full.dll",
+    "C:\\WINDOWS\\System32\\msvcp_win.dll",
+    "C:\\WINDOWS\\System32\\ucrtbase.dll",
+    "C:\\WINDOWS\\System32\\CRYPT32.dll",
+    "C:\\WINDOWS\\System32\\MSASN1.dll",
+    "C:\\WINDOWS\\SYSTEM32\\NETAPI32.dll",
+    "C:\\WINDOWS\\SYSTEM32\\dbghelp.dll",
+    "C:\\WINDOWS\\SYSTEM32\\USERENV.dll",
+    "C:\\WINDOWS\\SYSTEM32\\IPHLPAPI.DLL",
+    "C:\\WINDOWS\\System32\\profapi.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMM.dll",
+    "C:\\WINDOWS\\SYSTEM32\\WINMMBASE.dll",
+    "C:\\WINDOWS\\System32\\cfgmgr32.dll",
+    "C:\\WINDOWS\\SYSTEM32\\NETUTILS.DLL",
+    "C:\\WINDOWS\\SYSTEM32\\SRVCLI.DLL",
+    "C:\\WINDOWS\\System32\\IMM32.DLL",
+    "C:\\WINDOWS\\System32\\powrprof.dll",
+    "C:\\WINDOWS\\system32\\mswsock.dll",
+    "C:\\WINDOWS\\System32\\kernel.appcore.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTSP.dll",
+    "C:\\WINDOWS\\system32\\rsaenh.dll",
+    "C:\\WINDOWS\\SYSTEM32\\bcrypt.dll",
+    "C:\\WINDOWS\\SYSTEM32\\CRYPTBASE.dll",
+    "C:\\WINDOWS\\System32\\bcryptPrimitives.dll"
+  ]
+}

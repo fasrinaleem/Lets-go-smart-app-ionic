@@ -9,7 +9,7 @@ declare var google;
 export class GeolocationPage implements OnInit, AfterViewInit {
   latitude: any;
   longitude: any;
-  @ViewChild('mapElement', {static: true}) mapNativeElement: ElementRef;
+  @ViewChild('mapElement') mapNativeElement: ElementRef;
   constructor(private geolocation: Geolocation) { }
 
   ngOnInit() {

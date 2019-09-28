@@ -10,7 +10,7 @@ declare var google;
 export class MarkerPage implements OnInit, AfterViewInit {
   latitude: any;
   longitude: any;
-  @ViewChild('mapElement', {static: true}) mapNativeElement: ElementRef;
+  @ViewChild('mapElement') mapNativeElement: ElementRef;
   constructor(private geolocation: Geolocation) { }
 
   ngOnInit() {
@@ -36,9 +36,9 @@ export class MarkerPage implements OnInit, AfterViewInit {
       };
       const marker = new google.maps.Marker({
         position: pos,
-        map: ( '{map}'), 
+        map: map,
         title: 'Hello World!',
-        icon: ( '{icon}')
+        icon: icon
       });
       const contentString = '<div id="content">' +
           '<div id="siteNotice">' +

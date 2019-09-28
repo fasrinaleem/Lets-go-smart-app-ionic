@@ -8,9 +8,9 @@ declare var google;
   styleUrls: ['./direction-geo.page.scss'],
 })
 export class DirectionGeoPage implements OnInit, AfterViewInit {
-  @ViewChild('mapElement', {static: true}) mapNativeElement: ElementRef;
-  directionsService = new google.maps.DirectionsService();
-  directionsDisplay = new google.maps.DirectionsRenderer();
+  @ViewChild('mapElement') mapNativeElement: ElementRef;
+  directionsService = new google.maps.DirectionsService;
+  directionsDisplay = new google.maps.DirectionsRenderer;
   directionForm: FormGroup;
   currentLocation: any = {
     lat: 0,

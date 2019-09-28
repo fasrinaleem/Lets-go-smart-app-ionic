@@ -1,31 +1,47 @@
-import { NgModule } from '@angular/core';
-import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { PreloadAllModules, RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
   {
-    path: '',
-    redirectTo: 'login',
-    pathMatch: 'full'
+    path: "",
+    redirectTo: "home",
+    pathMatch: "full"
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    path: "home",
+    loadChildren: "./home/home.module#HomePageModule"
   },
-
   {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
+    path: "list",
+    loadChildren: "./list/list.module#ListPageModule"
   },
-  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
-  { path: 'register', loadChildren: './register/register.module#RegisterPageModule' },
-  { path: 'services', loadChildren: './services/services.module#ServicesPageModule' },
-  { path: 'autocomplete', loadChildren: './autocomplete/autocomplete.module#AutocompletePageModule' },
-  { path: 'direction', loadChildren: './direction/direction.module#DirectionPageModule' },
-  { path: 'direction-geo', loadChildren: './direction-geo/direction-geo.module#DirectionGeoPageModule' },
-  { path: 'geolocation', loadChildren: './geolocation/geolocation.module#GeolocationPageModule' },
-  { path: 'marker', loadChildren: './marker/marker.module#MarkerPageModule' },
-  { path: 'simple', loadChildren: './simple/simple.module#SimplePageModule' },
-  { path: 'token', loadChildren: './token/token.module#TokenPageModule' }
+  { path: "simple", loadChildren: "./simple/simple.module#SimplePageModule" },
+  {
+    path: "geolocation",
+    loadChildren: "./geolocation/geolocation.module#GeolocationPageModule"
+  },
+  { path: "marker", loadChildren: "./marker/marker.module#MarkerPageModule" },
+  {
+    path: "direction",
+    loadChildren: "./direction/direction.module#DirectionPageModule"
+  },
+  {
+    path: "direction-geo",
+    loadChildren: "./direction-geo/direction-geo.module#DirectionGeoPageModule"
+  },
+  {
+    path: "autocomplete",
+    loadChildren: "./autocomplete/autocomplete.module#AutocompletePageModule"
+  },
+  {
+    path: "register",
+    loadChildren: "./register/register.module#RegisterPageModule"
+  },
+  {
+    path: "services",
+    loadChildren: "./services/services.module#ServicesPageModule"
+  },
+  { path: "login", loadChildren: "./login/login.module#LoginPageModule" }
 ];
 
 @NgModule({

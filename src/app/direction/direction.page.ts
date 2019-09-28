@@ -4,16 +4,16 @@ import {
   ElementRef,
   OnInit,
   ViewChild
-} from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+} from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 declare var google;
 @Component({
-  selector: 'app-direction',
-  templateUrl: './direction.page.html',
-  styleUrls: ['./direction.page.scss']
+  selector: "app-direction",
+  templateUrl: "./direction.page.html",
+  styleUrls: ["./direction.page.scss"]
 })
 export class DirectionPage implements OnInit, AfterViewInit {
-  @ViewChild('mapElement', {static: true}) mapNativeElement: ElementRef;
+  @ViewChild("mapElement") mapNativeElement: ElementRef;
   directionsService = new google.maps.DirectionsService();
   directionsDisplay = new google.maps.DirectionsRenderer();
   directionForm: FormGroup;
@@ -25,8 +25,8 @@ export class DirectionPage implements OnInit, AfterViewInit {
 
   createDirectionForm() {
     this.directionForm = this.fb.group({
-      source: ['', Validators.required],
-      destination: ['', Validators.required]
+      source: ["", Validators.required],
+      destination: ["", Validators.required]
     });
   }
 
@@ -44,13 +44,13 @@ export class DirectionPage implements OnInit, AfterViewInit {
       {
         origin: formValues.source,
         destination: formValues.destination,
-        travelMode: 'DRIVING'
+        travelMode: "DRIVING"
       },
       (response, status) => {
-        if (status === 'OK') {
+        if (status === "OK") {
           that.directionsDisplay.setDirections(response);
         } else {
-          window.alert('Directions request failed due to ' + status);
+          window.alert("Directions request failed due to " + status);
         }
       }
     );

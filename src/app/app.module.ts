@@ -1,25 +1,18 @@
-import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { RouteReuseStrategy } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { RouteReuseStrategy } from "@angular/router";
 
-import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
-import { SplashScreen } from '@ionic-native/splash-screen/ngx';
-import { StatusBar } from '@ionic-native/status-bar/ngx';
+import { IonicModule, IonicRouteStrategy } from "@ionic/angular";
+import { SplashScreen } from "@ionic-native/splash-screen/ngx";
+import { StatusBar } from "@ionic-native/status-bar/ngx";
 
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner/ngx';
-import { Base64ToGallery } from '@ionic-native/base64-to-gallery/ngx';
-
-//fire base
-
-import { AngularFireModule } from '@angular/fire';
-import firebaseConfig from './credentials';
-import { AngularFirestoreModule } from '@angular/fire/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
-import { environment } from '../environments/environment';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
+import { AppComponent } from "./app.component";
+import { AppRoutingModule } from "./app-routing.module";
+import { ReactiveFormsModule } from "@angular/forms";
+import { AngularFireModule } from "@angular/fire";
+import { environment } from "src/environments/environment";
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireAuthModule } from "@angular/fire/auth";
 
 @NgModule({
   declarations: [AppComponent],
@@ -28,19 +21,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     BrowserModule,
     IonicModule.forRoot(),
     AppRoutingModule,
-    AngularFireModule.initializeApp(environment.firebase, 'lets-go-smart-app'),
+    AngularFireModule.initializeApp(environment.firebase, "lets-go-smart-app"),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    FormsModule,
     ReactiveFormsModule
-
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    BarcodeScanner,
-    Base64ToGallery
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
   ],
   bootstrap: [AppComponent]
 })

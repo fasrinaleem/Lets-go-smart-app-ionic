@@ -6,7 +6,7 @@ declare var google;
   styleUrls: ['./simple.page.scss'],
 })
 export class SimplePage implements OnInit, AfterViewInit {
-  @ViewChild('mapElement', {static: true}) mapNativeElement: ElementRef;
+  @ViewChild('mapElement') mapNativeElement: ElementRef;
   constructor() { }
 
   ngOnInit() {
