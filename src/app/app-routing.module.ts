@@ -47,7 +47,11 @@ const routes: Routes = [
   {
     path: "db-service",
     loadChildren: "./db-service/db-service.module#DbServicePageModule"
-  }
+  },
+  { path: 'trip-process', loadChildren: './trip-process/trip-process.module#TripProcessPageModule' },
+  { path: 'trip-mode', loadChildren: './trip-mode/trip-mode.module#TripModePageModule' },
+  { path: 'payment-method', loadChildren: './payment-method/payment-method.module#PaymentMethodPageModule' },
+  { path: 'payment-web', loadChildren: './payment-web/payment-web.module#PaymentWebPageModule' }
 ];
 
 @NgModule({

@@ -1,5 +1,6 @@
 import { Component } from "@angular/core";
 import { Router } from "@angular/router";
+import { ServicesPage } from "../services/services.page";
 
 @Component({
   selector: "app-home",
@@ -7,10 +8,9 @@ import { Router } from "@angular/router";
   styleUrls: ["home.page.scss"]
 })
 export class HomePage {
-  constructor(private router: Router) {}
+  constructor(private router: Router, public userServices: ServicesPage) {}
 
-  login() {
-    alert("fasrin");
-    this.router.navigate["login"];
+  logout() {
+    this.userServices.logOut();
   }
 }

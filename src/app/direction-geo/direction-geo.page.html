@@ -7,14 +7,40 @@
   </ion-toolbar>
 </ion-header>
 <ion-content>
-
-  <form [formGroup]="directionForm" (ngSubmit)="calculateAndDisplayRoute(directionForm.value)">
+  <form
+    [formGroup]="directionForm"
+    (ngSubmit)="calculateAndDisplayRoute(directionForm.value)"
+  >
     <ion-item>
       <ion-label position="floating">Destination</ion-label>
       <ion-input formControlName="destination"></ion-input>
     </ion-item>
-    <ion-button expand="full" type="submit" [disabled]="!directionForm.valid">Get Direction</ion-button>
+    <ion-button expand="full" type="submit" [disabled]="!directionForm.valid"
+      >Get Direction</ion-button
+    >
   </form>
+  <div text-end>
+    <ion-badge color="warning">{{ distance }}</ion-badge>
+    <ion-badge color="warning">{{ duration }}</ion-badge>
+  </div>
 
   <div #mapElement class="map"></div>
+  <ion-card>
+    <ion-card-content>
+      <div>
+        <ion-badge color="warning" style="font-size:15px"
+          >Total Price : {{ totalPrice }}.00 LKR</ion-badge
+        >
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <div>
+    <ion-button
+      expand="full"
+      type="submit"
+      [disabled]="directionForm.invalid"
+      (click)="goToPayment()"
+      >Pay for My Trip</ion-button
+    >
+  </div>
 </ion-content>

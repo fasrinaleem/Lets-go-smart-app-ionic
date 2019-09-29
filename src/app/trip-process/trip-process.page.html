@@ -1,0 +1,19 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/direction"> </ion-back-button>
+    </ion-buttons>
+    <ion-title>Pay for My Trip</ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-toolbar>
+  <ion-title> Confirm Your Trip Details </ion-title>
+</ion-toolbar>
+
+<ion-content>
+  <p>Distance : {{ data.distance }}</p>
+  <p>Duration : {{ data.duration }}</p>
+  <p>Price : {{ data.totalPrice }}</p>
+  <ion-button href="/home" color="danger"> Cancel </ion-button>
+  <ion-button href="/payment-method" color="success"> Confirm </ion-button>
+</ion-content>

@@ -6,6 +6,7 @@ import {
   ViewChild
 } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { NavigationExtras, Router } from "@angular/router";
 declare var google;
 @Component({
   selector: "app-direction",
@@ -17,8 +18,22 @@ export class DirectionPage implements OnInit, AfterViewInit {
   directionsService = new google.maps.DirectionsService();
   directionsDisplay = new google.maps.DirectionsRenderer();
   directionForm: FormGroup;
-  constructor(private fb: FormBuilder) {
+  distance: string = "";
+  duration: string = "";
+  totalPrice: number = 0;
+  constructor(private fb: FormBuilder, private router: Router) {
     this.createDirectionForm();
+  }
+
+  setDistance(distance) {
+    this.distance = distance;
+  }
+  setDuration(duration) {
+    this.duration = duration;
+  }
+  setTotalPrice(totalPrice) {
+    this.totalPrice = parseInt(totalPrice) * 2;
+    console.log(this.totalPrice);
   }
 
   ngOnInit() {}
@@ -49,10 +64,27 @@ export class DirectionPage implements OnInit, AfterViewInit {
       (response, status) => {
         if (status === "OK") {
           that.directionsDisplay.setDirections(response);
+          console.log(response);
+          this.setDistance(response.routes[0].legs[0].distance.text);
+          this.setDuration(response.routes[0].legs[0].duration.text);
+          this.setTotalPrice(response.routes[0].legs[0].distance.text);
         } else {
           window.alert("Directions request failed due to " + status);
         }
       }
     );
+  }
+  goToPayment() {
+    let data = {
+      distance: this.distance,
+      totalPrice: this.totalPrice,
+      duration: this.duration
+    };
+    let naviagtionExtras: NavigationExtras = {
+      state: {
+        data: data
+      }
+    };
+    this.router.navigate(["trip-process"], naviagtionExtras);
   }
 }

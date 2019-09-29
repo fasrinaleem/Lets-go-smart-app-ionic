@@ -12,8 +12,8 @@ import { AngularFireAuth } from "@angular/fire/auth";
   styleUrls: ["./token.page.scss"]
 })
 export class TokenPage implements OnInit {
-  qrData = "";
-  qr;
+  qrData = "200";
+  //qr;
   scannedCode = null;
   elementType: "canvas" | "img" = "canvas";
   user: any;
@@ -27,13 +27,13 @@ export class TokenPage implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.ser.getUserEmail().then(data => {
-      //this.qr = data;
-      this.ser.getPrice(data).subscribe(data => {
-        console.log(data);
-        this.qrData = data[0].amount;
-      });
-    });
+    // this.ser.getUserEmail().then(data => {
+    //   //this.qr = data;
+    //   this.ser.getPrice(data).subscribe(data => {
+    //     //  console.log(data);
+    //     //  this.qrData = data[0].amount;
+    //   });
+    // });
   }
 
   scanCode() {
